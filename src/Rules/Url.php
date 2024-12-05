@@ -82,7 +82,7 @@ class Url extends Rule
      * @param null $scheme
      * @return bool
      */
-    public function validateCommonScheme($value, $scheme = null): bool
+    public function validateCommonScheme($value, mixed $scheme = null): bool
     {
         if (!$scheme) {
             return $this->validateBasic($value) && (bool) preg_match("/^\w+:\/\//i", $value);
